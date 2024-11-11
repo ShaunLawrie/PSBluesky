@@ -39,6 +39,25 @@ Function _newFacetLink {
     }
 }
 
+Function _getEmbedThumbnails {
+    Param(
+        [object]$Embed
+    )
+
+    if ($Embed.'$type' -eq 'app.bsky.embed.images#view') {
+        $Embed.images.thumb
+    }
+    elseif ($Embed.'$type' -eq 'app.bsky.embed.external#view') {
+        $Embed.thumb
+    }
+    elseif ($Embed.'$type' -eq 'app.bsky.embed.video#view') {
+        $Embed.thumbnail
+    }
+    else {
+        $null
+    }
+}
+
 Function _convertAT {
     [cmdletbinding()]
     Param(

@@ -6,6 +6,17 @@
 
 This module is a set of PowerShell functions designed to let you interact with Bluesky API from PowerShell. Technically, the module commands are wrappers around the [atproto protocols](https://docs.bsky.app/docs/category/http-reference). The module is written for PowerShell 7, although it might work as written in Windows PowerShell with minimal changes. Commands have not been tested for cross-platform compatibility.
 
+# TUI Hacks
+
+There is a script at the root of the repo that when run in Windows Terminal Preview with PwshSpectreConsole Prerelease installed will render a visual timeline.
+
+```powershell
+Install-Module -Name PwshSpectreConsole -AllowPrerelease -Scope CurrentUser
+.\Invoke-BlueSkyUI.ps1
+```
+
+![alt text](images/tui.png)
+
 ## Installation
 
 You can install the module from the PowerShell Gallery.

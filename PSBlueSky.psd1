@@ -19,7 +19,8 @@
         'Get-BskyFollowing',
         'Get-BskyProfile',
         'Get-BskySession',
-        'Get-BskyTimeline'
+        'Get-BskyTimeline',
+        'Get-BskyTimelineThreaded',
         'New-BskyPost',
         'Open-BskyHelp'
     )
